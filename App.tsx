@@ -20,7 +20,7 @@ import {
 } from 'react-native';
 import { Colors } from './src/assets/literals/Literals';
 import RootStackNav from './src/navigation/RootStackNav';
-
+import { Provider, useSelector } from 'react-redux';
 // import {
 //   Colors,
 //   DebugInstructions,
@@ -28,13 +28,16 @@ import RootStackNav from './src/navigation/RootStackNav';
 //   LearnMoreLinks,
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
+import store, { RootState } from "./src/store";
 
 const App = () => {
 
 
   return (
     <SafeAreaView style={styles.container}>
-      <RootStackNav/>
+      <Provider store={store}>
+        <RootStackNav />
+      </Provider>
     </SafeAreaView>
   );
 };
