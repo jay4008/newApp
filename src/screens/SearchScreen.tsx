@@ -85,12 +85,15 @@ const HomeSearchScreen = (props: any) => {
                     }}
                     onEndReachedThreshold={0.1}
                     renderItem={({ item, index }) => (
-                        <TouchableOpacity style={styles.giphyElement} onPress={() => props.navigation.navigate('Details', { item: item })}>
+                        <>
+                        
+                        <TouchableOpacity style={styles.giphyElement} onPress={() =>item?.user?.avatar_url !== undefined  &&   item?.user?.avatar_url !== "" && item?.user?.avatar_url !== "undefined" && props.navigation.navigate('Details', { item: item })}>
                             <Image source={{ uri: item?.user?.avatar_url }} style={styles.imageDimension} resizeMode={'cover'} />
                             <View style={styles.giphyTxt}>
                                 <Text numberOfLines={1} style={{ fontFamily: Fonts.latoRegular, color: Colors.white, marginLeft: 10 }}>{item?.user?.display_name}</Text>
                             </View>
                         </TouchableOpacity>
+                        </>
                     )}
                     ListFooterComponent={() => (
                         <View style={styles.loadingView}>

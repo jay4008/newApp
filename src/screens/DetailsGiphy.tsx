@@ -28,7 +28,7 @@ const DetailsGiphy = (props: any) => {
                     <Image source={{ uri: props.route.params.item.user.banner_url }} style={{ height: width / 2, width: width, marginTop: 20 }} />
 
                     <View style={{ position: 'absolute', right: 0, bottom: -10, height: 25, backgroundColor: 'rgba(0, 0, 0, .5)', justifyContent: 'center', width: "100%" }}>
-                        <Text style={{ color: "#fff", marginLeft: 10, textAlign: 'center' }}>{"Banner url image"}</Text>
+                        <Text style={{ color: "#fff", marginLeft: 10, textAlign: 'center' }}>{"Banner url"}</Text>
                     </View>
                 </View>
 
